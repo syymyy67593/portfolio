@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Native Creative | [Your Name] Portfolio</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .project-card { cursor: pointer; }
+        .contact-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .contact-btns {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scroll-progress"></div>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">AI NATIVE CREATIVE</div>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#workflow" class="nav-link">Workflow</a></li>
+                <li><a href="#works" class="nav-link">Works</a></li>
+                <li><a href="#contact" class="nav-link btn-primary btn" style="padding: 0.5rem 1.5rem; color: #fff;">Hire Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay-gradient"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-tag reveal">Optimizing with AI, Rooted in Humanity</span>
+                <h1 class="hero-title reveal">AIと共創し、<br><span>知性を形にする。</span></h1>
+                <p class="hero-desc reveal">
+                    最新のAIツール（ChatGPT, Claude, Cursor等）を駆使し、
+                    コンテンツ制作、Web開発、データ分析の限界を突破します。
+                    「AI×人間」の最適解を追求するクリエイターです。
+                </p>
+                <div class="hero-actions reveal">
+                    <a href="#about" class="btn btn-primary" style="margin-right: 1.5rem;">私について</a>
+                    <a href="#works" class="btn" style="border: 1px solid var(--clr-primary); color: var(--clr-primary);">実績を見る</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
+                    <div class="reveal">
+                        <span class="hero-tag" style="background: rgba(123, 97, 255, 0.1); color: var(--clr-accent); border-color: rgba(123, 97, 255, 0.2);">My Mission</span>
+                        <h2 style="margin: 1.5rem 0 2rem;">AIを、もっと身近に。<br>もっと使いやすく。</h2>
+                        <p style="margin-bottom: 1.5rem; font-size: 1.2rem; color: var(--clr-white);">
+                            私のミッションは、急速に進化するAIという魔法を、誰もが日常で使いこなせる「道具」として、分かりやすく、温かく世の中に広めていくことです。
+                        </p>
+                        <p style="margin-bottom: 1.5rem;">
+                            現場での過酷な実体験をベースに、ITとAIの力で「人間の負担を減らし、創造性を最大化する」方法を日々追求しています。最新のAI情報を1年以上発信し続けているのは、その可能性を一人でも多くの人に伝えたいという想いがあるからです。
+                        </p>
+                        <p>
+                            「難しいことを、誰よりも分かりやすく。」
+                            あなたの隣に寄り添うAIパートナーとして、誠実かつ革新的なサポートをお約束します。
+                        </p>
+                    </div>
+                    <div class="reveal glass-card" style="padding: 3rem;">
+                        <h3 style="color: var(--clr-primary); margin-bottom: 2rem; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.2em;">Principles</h3>
+                        <ul style="color: var(--clr-text-dim); line-height: 2.2;">
+                            <li style="display: flex; align-items: center; gap: 1rem;"><span style="color: var(--clr-primary); font-size: 1.2rem;">✓</span> 現場の痛みを理解する人間主義</li>
+                            <li style="display: flex; align-items: center; gap: 1rem;"><span style="color: var(--clr-primary); font-size: 1.2rem;">✓</span> 常に最新を追い続ける知的好奇心</li>
+                            <li style="display: flex; align-items: center; gap: 1rem;"><span style="color: var(--clr-primary); font-size: 1.2rem;">✓</span> 本質を分かりやすく伝える言語化力</li>
+                            <li style="display: flex; align-items: center; gap: 1rem;"><span style="color: var(--clr-primary); font-size: 1.2rem;">✓</span> 一つひとつの仕事に込める誠実さ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="workflow" class="section-padding">
+            <div class="container">
+                <div class="text-center reveal" style="margin-bottom: 4rem;">
+                    <h2>AI Workflow</h2>
+                    <p>私の制作プロセスは、AIとの対話から始まります。</p>
+                </div>
+                <div class="workflow-grid">
+                    <div class="workflow-card glass-card reveal">
+                        <span class="workflow-icon">🧠</span>
+                        <h3>Insight & Plan</h3>
+                        <p>AIと共に情報の海をリサーチし、最も効果的な構成案を瞬時に構築します。</p>
+                    </div>
+                    <div class="workflow-card glass-card reveal">
+                        <span class="workflow-icon">⚡</span>
+                        <h3>Co-Creation</h3>
+                        <p>プロンプトエンジニアリングを駆使し、高品質なドラフトを高速に生成。人間が「魂」を吹き込みます。</p>
+                    </div>
+                    <div class="workflow-card glass-card reveal">
+                        <span class="workflow-icon">💎</span>
+                        <h3>Refinement</h3>
+                        <p>細部にまでこだわった調整と検証。AIの効率と、人間の感性を融合させた唯一無二の成果物へと仕上げます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="section-padding" style="background: rgba(255,255,255,0.02);">
+            <div class="container">
+                <div class="text-center reveal" style="margin-bottom: 6rem;">
+                    <h2>Works & Expertise</h2>
+                </div>
+                
+                <div class="gallery-grid">
+                    <!-- Work 1: AI Blog -->
+                    <a href="https://aiinfo2026.com" target="_blank" class="project-card reveal" style="display: block;">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200" alt="AI Info Blog" class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Media & Analysis</span>
+                            <h3>AI情報ブログ『AI INFO 2026』</h3>
+                            <p>最新のAIトレンドを日々リサーチし、専門的な知見を分かりやすく言語化。情報収集能力と解説力を兼ね備えています。</p>
+                        </div>
+                    </a>
+
+                    <!-- Work 2: Novel Game / note -->
+                    <a href="https://note.com/angurachan2006/n/n85282e57720d" target="_blank" class="project-card reveal" style="display: block;">
+                        <div class="project-img-wrapper">
+                            <img src="assets/white_letter_close_up.png" alt="Mizu no Ko Story" class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Storytelling & Game Planning</span>
+                            <h3>ノベルゲーム『水の子』（原作）</h3>
+                            <p>noteで公開中の短編ホラーをベースにしたプロフェッショナルな習作。物語を多媒体で再構築する企画・構成力を示します。</p>
+                        </div>
+                    </a>
+
+                    <!-- Work 3: Web Design -->
+                    <a href="project-river.html" class="project-card reveal" style="display: block;">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1200" alt="River's Soul Project" class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Web Development</span>
+                            <h3>Organic Luxury Retreat『River's Soul』</h3>
+                            <p>自然と洗練の融合をテーマにしたWeb制作。HTML/CSSの基礎力に加え、モダンなUI/UXを追求した制作例です。</p>
+                        </div>
+                    </a>
+
+                    <!-- Work 4: Future / Support -->
+                    <a href="#contact" class="project-card reveal" style="display: block;">
+                        <div class="project-img-wrapper" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #1e3a8a, #7e22ce);">
+                            <div style="font-size: 5rem;">💬</div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Support & Professionalism</span>
+                            <h3>Customer Success & Support</h3>
+                            <p>これまでの多角的な経験を活かし、ユーザーに寄り添った誠実なサポートを提供。AIツールを用いた効率的な課題解決も得意としています。</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-padding">
+            <div class="container reveal">
+                <div class="contact-content glass-card" style="padding: 4rem;">
+                    <span class="hero-tag">Contact</span>
+                    <h2>新しい可能性を、<br>語り合いましょう。</h2>
+                    <p style="margin-top: 1.5rem;">
+                        アノテーション案件、記事執筆、Webサポートなど、私がお役に立てることがあればお気軽にご相談ください。
+                        24時間以内に折り返しご連絡いたします。
+                    </p>
+                    <div class="contact-btns">
+                        <a href="mailto:angurachan2006@gmail.com" class="btn btn-primary">メールを送る</a>
+                        <a href="https://crowdworks.jp/public/employees/4753693" target="_blank" class="btn" style="border: 1px solid var(--clr-primary); color: var(--clr-primary);">クラウドワークスで相談</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo logo">AI NATIVE CREATIVE</div>
+            <p style="margin-bottom: 1rem;">Let's Create the Future Together.</p>
+            <p style="font-size: 0.8rem; opacity: 0.5;">&copy; 2026 AI Native Creative Portfolio. Built with AI & Human Soul.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar change on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.navbar');
+            const progress = document.querySelector('.scroll-progress');
+            const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = window.scrollY;
+            
+            if (scrolled > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+
+            // Progress bar
+            const width = (scrolled / scrollable) * 100;
+            progress.style.width = `${width}%`;
+        });
+
+        // Reveal on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

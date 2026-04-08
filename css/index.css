@@ -1,0 +1,328 @@
+/* index.css - AI Native Portfolio Design System */
+
+:root {
+    /* Color Palette - Intellectual & Futuristic */
+    --clr-bg: #0A0F1E; /* Deep Space Blue */
+    --clr-primary: #00D2FF; /* Electric Cyan */
+    --clr-secondary: #0081FF; /* Bright Blue */
+    --clr-accent: #7B61FF; /* Soft Lavender Purple */
+    --clr-text: #FFFFFF;
+    --clr-text-dim: #A0AEC0;
+    --clr-white: #FFFFFF;
+    
+    /* Glassmorphism System */
+    --clr-glass-bg: rgba(255, 255, 255, 0.03);
+    --clr-glass-border: rgba(255, 255, 255, 0.1);
+    --glass-blur: blur(12px);
+
+    /* Typography */
+    /* Using modern sans-serif fonts */
+    --ff-heading: 'Outfit', 'Inter', sans-serif;
+    --ff-body: 'Inter', system-ui, sans-serif;
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 10rem;
+
+    /* Transitions */
+    --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    background-color: var(--clr-bg);
+}
+
+body {
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+    font-family: var(--ff-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Scale */
+h1, h2, h3 {
+    font-family: var(--ff-heading);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(3rem, 10vw, 5.5rem); }
+h2 { font-size: clamp(2.5rem, 5vw, 3.5rem); }
+h3 { font-size: 1.5rem; }
+
+p {
+    color: var(--clr-text-dim);
+    font-size: 1.1rem;
+}
+
+/* Global Elements */
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; transition: var(--transition-smooth); }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-padding {
+    padding: var(--space-xl) 0;
+}
+
+/* Glass Card Utility */
+.glass-card {
+    background: var(--clr-glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--clr-glass-border);
+    border-radius: 24px;
+    transition: var(--transition-smooth);
+}
+
+.glass-card:hover {
+    border-color: var(--clr-primary);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 2rem 0;
+    transition: var(--transition-smooth);
+}
+
+.navbar.scrolled {
+    padding: 1.2rem 0;
+    background: rgba(10, 15, 30, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--clr-glass-border);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.05em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--clr-text-dim);
+}
+
+.nav-link:hover {
+    color: var(--clr-primary);
+}
+
+/* Button UI */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 2.5rem;
+    border-radius: 100px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--clr-primary), var(--clr-secondary));
+    color: #fff;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.4);
+    transform: scale(1.02);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 100px;
+}
+
+.hero-overlay-gradient {
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 60%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(123, 97, 255, 0.15) 0%, rgba(10, 15, 30, 0) 70%);
+    z-index: -1;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background: rgba(0, 210, 255, 0.1);
+    color: var(--clr-primary);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: 1px solid rgba(0, 210, 255, 0.2);
+}
+
+.hero-title {
+    margin-bottom: 2rem;
+}
+
+.hero-title span {
+    background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-desc {
+    max-width: 600px;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+}
+
+/* Workflow Section */
+.workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.workflow-card {
+    padding: 3.5rem 2rem;
+    text-align: center;
+}
+
+.workflow-icon {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.workflow-card h3 {
+    margin-bottom: 1rem;
+    color: var(--clr-primary);
+}
+
+/* Gallery Section */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.project-card {
+    padding-bottom: 2rem;
+}
+
+.project-img-wrapper {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 24px;
+    margin-bottom: 2rem;
+    background: #1A202C;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.08);
+}
+
+.project-tag {
+    color: var(--clr-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    display: block;
+    letter-spacing: 0.1em;
+}
+
+/* Footer & Contact */
+.footer {
+    border-top: 1px solid var(--clr-glass-border);
+    padding: var(--space-lg) 0;
+    text-align: center;
+}
+
+.footer-logo {
+    margin-bottom: 2rem;
+}
+
+/* Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scroll context */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--clr-primary);
+    z-index: 2000;
+    width: 0%;
+}
+
+@media (max-width: 992px) {
+    .workflow-grid, .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-img-wrapper {
+        height: 300px;
+    }
+}
